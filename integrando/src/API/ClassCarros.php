@@ -1,21 +1,31 @@
 <?php
-    require "ClassConexao.php";
+    include ("ClassConexao.php");
 
-    class ClassCarros
+    class ClassCarros extends ClassConexao
     {
-        public $id_carro;
-        public $marca;
-        public $modelo;
-        public $ano;
 
         #Exibiação dos carros em um json
-        public static function exibeCarros()
+        public function exibeCarros()
         {
-            $connection = ClassConexao :: conectaDB();
+            $sql = $this->conectaDB()->prepare("SELECT * FROM carros");
+            $sql->execute();
+            
+            $J = [];
+            $I = 0;
 
-            $sql = $connection->query("SELECT * FROM carros");
-            return $sql->fetchAll(PDO::FETCH_ASSOC);
+            while($Fetch = $sql->fetch(PDO::FETCH_ASSOC)){
+                $J[$I] = [
+                    "id_carro"=>$Fetch["id_carro"],
+                    "marca" =>$Fetch["marca"],
+                    "modelo" =>$Fetch["modelo"],
+                    "ano" => $Fetch["ano"]
+                ];
+                $I++;
+            }
 
+            header("Access-Control-Allow-Origin:*");
+            header("Content-type: application/json");
+            echo json_encode($J);
         }
     }
 

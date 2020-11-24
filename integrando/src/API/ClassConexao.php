@@ -1,12 +1,12 @@
 <?php
-    class ClassConexao{
+    abstract class ClassConexao{
         #conexão com o banco de dados
-        public function conectaDB()
+        protected function conectaDB()
         {
             try{
-                $conn = new PDO("mysql: host=localhost; dbname=carro", "root", "");
+                $Con = new PDO("mysql: host=localhost; dbname=carro", "root", "");
             }catch(PDOException $Erro){
-                return $Erro->getMessage;
+                return $Erro->getMessage();
             }
         }
     }
