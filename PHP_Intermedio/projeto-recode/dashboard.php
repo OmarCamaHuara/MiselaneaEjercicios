@@ -1,3 +1,10 @@
+<?php
+    require "Models/Student.php";
+    $total = Student :: getTotalStudents();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,15 +36,15 @@
     <script>
         var ctx = document.getElementById("myChart").getContext('2d');
         var myChart = new Chart(ctx, {
-            type: 'bar',
+            type: 'pie',
             data: {
                 labels: ['Monitores', 'Alunos'],
                 datasets: [
                     {
-                        data: [2, 114],
+                        data: [50, <?= $total[0]["Total_student"]?>],
                         backgroundColor:[
                             '#be2121', 
-                            '#212100'
+                            '#202010'
                         ]
                     }
                 ]

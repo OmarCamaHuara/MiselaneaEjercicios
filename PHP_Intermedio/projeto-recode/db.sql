@@ -10,3 +10,9 @@ CREATE TABLE recode.students(
 SELECT * FROM students;
 
 INSERT INTO students (name, telphone) VALUES ('Edik', '999999');
+INSERT INTO students (name, telphone) VALUES ('Omar', '11980808286');
+
+SELECT COUNT(*) AS Total_student
+FROM students
+
+
