@@ -75,10 +75,3 @@ FROM contas_correntes AS cc
     LEFT JOIN bancos AS b
     ON cc.id_bancos = b.id_codigo
 
-SELECT p.nome
-FROM contas_correntes AS cc
-    RIGHT JOIN pessoas AS p
-    ON cc.id_pessoas = p.id_CPF
-    RIGHT JOIN bancos AS b
-    ON cc.id_bancos = b.id_codigo
-WHERE id_CPF = NULL;

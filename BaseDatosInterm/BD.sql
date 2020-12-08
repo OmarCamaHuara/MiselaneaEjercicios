@@ -39,6 +39,8 @@ CREATE TABLE vendas(
     FOREIGN KEY (idProduto) REFERENCES produtos(idProduto)
 );
 
+DROP TABLE vendas;
+
 INSERT INTO fornecedores(empresa, CNPJ_CPF, endereco, telefone, email)
 VALUES ('Uber', 111111111, 'Rua 1, 001', 10101010, 'uber@gmail.com'),
 ('IBM', 222222222, 'Rua 2, 002', 20202020, 'ibm@gmail.com'),
@@ -49,9 +51,7 @@ VALUES ('Uber', 111111111, 'Rua 1, 001', 10101010, 'uber@gmail.com'),
 SELECT *
 FROM fornecedores;
 
-idFornecedor INT NOT NULL,
-    nome TEXT NOT NULL,
-    qualidade INT NOT NULL,
+
 
 INSERT INTO produtos (idFornecedor, nome, qualidade ) 
 VALUES (2, 'microChip', 50),
@@ -64,12 +64,38 @@ SELECT *
 FROM produtos;
 
 INSERT INTO clientes(nome, telefone, dataNasc, CPF, endereco)
-VALUES ('Carlos', 121212, '28/11/91', 20202020, 'Rua A, 200'),
-('Fidel', 131313, '29/06/92', 30303030, 'Rua B, 300'),
-('Omar', 141414, '03/09/99', 40404040, 'Rua C, 400'),
-('Nancy', 151515, '06/05/95', 50505050, 'Rua D, 500'),
-('Edik', 161616, '02/02/89', 60606060, 'Rua E, 600');
+VALUES ('Carlos', 121212, '1991-11-03', 20202020, 'Rua A, 200'),
+('Fidel', 131313, '1992-06-28', 30303030, 'Rua B, 300'),
+('Omar', 141414, '1999-09-03', 40404040, 'Rua C, 400'),
+('Nancy', 151515, '1995-05-30', 50505050, 'Rua D, 500'),
+('Edik', 161616, '1985-02-02', 60606060, 'Rua E, 600');
 
 SELECT *
 FROM clientes;
+
+INSERT INTO vendas (idCliente, idProduto, quantidade) 
+VALUES (1, 10, 35),
+(3, 6, 150),
+(5, 7, 200),
+(2, 10, 2),
+(1, 8, 600),
+(4, 6, 50)
+
+SELECT *
+FROM vendas;
+
+SELECT p.nome, SUM(v.quantidade) AS quantidadeTotal
+FROM produtos AS p
+    JOIN vendas AS v
+    ON p.idProduto = v.idProduto
+GROUP BY p.nome
+ORDER BY SUM(v.quantidade) DESC LIMIT 1;
+
+
+
+
+SELECT
+FROM 
+
+
 
