@@ -1,9 +1,10 @@
-var app = require('./app/config/server');
+var ava = require('./ava/config/server');
 
-var rotaHome = require('./app/routes/home')(app);
-var rotaHome = require('./app/routes/front')(app);
-var rotaHome = require('./app/routes/back')(app);
+var rotaHome = require('./ava/routes/home')(ava);
+var rotaHome = require('./ava/routes/front')(ava);
+var rotaHome = require('./ava/routes/back')(ava);
 
-app.listen(3000, function(){
+ava.listen(3000, function(){
     console.log("Servidor rodando con Express")
 })
+

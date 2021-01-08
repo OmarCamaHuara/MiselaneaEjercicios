@@ -1,17 +1,12 @@
-const { any } = require('async');
-var db = require('../config/database');
-module.exports = function(app){
-    var connetion = db();
-        any
-    app.get('/frontend', function(req, res){
-        var query = connetion.query("SECTION * FROM conteudos WHERE categoria = 'frontend'",
-            function(error, results, fields){
-                console.log(error, results)
-                res.render('paginas/frontend', {dados:results});
-            });
+module.exports = function(ava){
+    app.get('/frontend', function(req, res){      
+        var connection = ava.ava.config.database();
 
-            query.on('error', function(error){
-                console.log("[mysql error:]", error);
+        var query = ava.ava.models.conteudoModels;
+        query.getConteudo(connection, 
+            function(error, results, fields){
+                    console.log(error, results)
+                    res.render('paginas/frontend', {dados:results});
             });
     });
 }

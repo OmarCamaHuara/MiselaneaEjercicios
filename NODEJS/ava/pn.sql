@@ -5,3 +5,4 @@ create table conteudos(
     categoria varchar(50),
     conteudo varchar(200)
 )
+

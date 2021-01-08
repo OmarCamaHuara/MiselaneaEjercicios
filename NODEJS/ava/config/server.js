@@ -1,7 +1,14 @@
 var express = require('express');
-var app = express();
+var consign = require('consign');
 
-app.set('view engine', 'ejs');
-app.set('views', '././app/views');
+var ava = express();
+ava.set('view engine', 'ejs');
+ava.set('view', '././ava/views');
 
-module.exports = app;
+consign()
+.include('./ava/routes')
+.then('././ava/config/database.js')
+.then('././ava/models')
+.into(ava);
+
+module.exports = ava;
