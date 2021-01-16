@@ -1,25 +1,27 @@
+import React, { Component } from 'react';
+import { connect } from 'react-redux' 
 import logo from './logo.svg';
 import './App.css';
+import { render } from 'react-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    const { newValue } = this.props;
+    return (
+      <div className="App" style={{ paddingTop: '10px' }}>
+        <h2>App3: React com Redux</h2>
+          <input type='text'/>
+          <button>
+            Enviar
+          </button>
+          <h3>{ newValue }</h3>
+      </div>
+    );
+  }
+  
 }
+const mapStateToProps = store => ({
+  newValue: store.clickState.newValue
+})
 
 export default App;
