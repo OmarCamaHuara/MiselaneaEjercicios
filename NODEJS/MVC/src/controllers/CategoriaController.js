@@ -1,6 +1,6 @@
 class CategoriaController {
     indexAction(req, res) {
-        res.send("Ola");
+        res.send("Ola omar");
     }
 }
 

@@ -24,7 +24,7 @@ class Postagem {
                 if(error){
                     res.send(error)
                 }else {
-                    res.status(201), send("Postagem cadastarado")
+                    res.status(201).send("Postagem cadastrado")
                 }
             }
 
