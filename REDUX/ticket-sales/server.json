@@ -1,0 +1,52 @@
+{
+    "books":[
+        {
+            "id": 1,
+            "title": "Paris",
+            "price": 499.00,
+            "image": "https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        },
+        {
+            "id": 2,
+            "title": "Bolivia",
+            "price": 899.00,
+            "image": "https://images.pexels.com/photos/592604/pexels-photo-592604.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        },
+        {
+            "id": 3,
+            "title": "Argentina",
+            "price": 599.00,
+            "image": "https://images.pexels.com/photos/4239487/pexels-photo-4239487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        },
+        {
+            "id": 4,
+            "title": "Ecuador",
+            "price": 699.00,
+            "image": "https://images.pexels.com/photos/2537753/pexels-photo-2537753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        },
+        {
+            "id": 5,
+            "title": "China",
+            "price": 899.00,
+            "image": "https://images.pexels.com/photos/745243/pexels-photo-745243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        },
+        {
+            "id": 6,
+            "title": "Australia",
+            "price": 299.00,
+            "image": "https://images.pexels.com/photos/995764/pexels-photo-995764.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        },
+        {
+            "id": 7,
+            "title": "Canada",
+            "price": 399.00,
+            "image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        },
+        {
+            "id": 8,
+            "title": "Rusia",
+            "price": 999.00,
+            "image": "https://images.pexels.com/photos/164583/pexels-photo-164583.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        }
+    ]
+}
