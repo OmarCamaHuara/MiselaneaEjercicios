@@ -16,7 +16,8 @@
 
 .book-container img {
     align-self: center;
-    max-width: 180px;
+    max-width: 150px;
+    max-height: 200px;
 }
 
 .book-container > strong {
@@ -35,7 +36,7 @@
 .book-container button {
     background: transparent;
     color: #878C99;
-    border: 2px solid #33BFCB;
+    border: 2px solid #040a42;
     border-radius: 4px;
     overflow: hidden;
     margin-top: auto;
@@ -45,9 +46,9 @@
 }
 
 .book-container button:hover {
-    border: 2px solid #33BFCB;
+    border: 2px solid #040a42;
     color: #FFF;
-    background: #33BFCB;
+    background: #040a42;
 }
 
 .book-container button div{
@@ -56,7 +57,7 @@
     padding: 12px;
     color: #878C99;
     background: #FFF;
-    border-radius: 2px solid #33BFCB;
+    border-radius: 2px solid #040a42;
 }
 
 .book-container button div svg {

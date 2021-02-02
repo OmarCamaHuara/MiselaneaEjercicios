@@ -7,7 +7,18 @@ def home():
     if(request.method == "GET"):
         return render_template("index.html")
     else:
-        return "POST"
+        return "Voce esta acessando via otro Verbo"
+
+
+@app.errorhandler(404)
+def not_found(error):
+    return render_template("error.html")
+
+@app.errorhandler(405)
+def not_found2(error):
+    return {
+        "Mensage": "NOT"
+    }
 
 # @app.route("/", methods=["POST"])
 # def sobre():

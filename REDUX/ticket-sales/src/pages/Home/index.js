@@ -47,7 +47,7 @@ export default function Home() {
 
                     <button type="button" onClick={() => handleAddProduct(book)}>
                         <div>
-                            <FiShoppingBag size={16} color="#33BFCB"/>{' '}
+                            <FiShoppingBag size={16} color="#040a42"/>{' '}
                             {amount[book.id] || 0}
                         </div>
 

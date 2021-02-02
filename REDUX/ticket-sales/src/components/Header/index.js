@@ -6,7 +6,7 @@ import { FiShoppingBag } from 'react-icons/fi';
 
 import './styles.css';
 
-import logo from '../../assets/book.png'
+import logo from '../../assets/plane-ticket.png'
 
 export default function Header() {
     const cartSize = useSelector(state => state.cart.length)
@@ -18,12 +18,12 @@ export default function Header() {
             </Link>
             <Link to="./card" className="header-cart">
                 <div>
-                    <strong>Sacola</strong>
+                    <strong>Sacola </strong>
                     <span>
                         <strong>{cartSize}</strong> Sales
                     </span>
                 </div>
-                <FiShoppingBag size={36} color="#FFF" />
+                <FiShoppingBag size={32} color="#FFF" />
             </Link>
         </header>
     )

@@ -13,8 +13,8 @@
 
 .bag-container footer button {
     background: transparent;
-    color: #33BFCB;
-    border: 2px solid #33BFCB;
+    color: #040a42;
+    border: 2px solid #040a42;
     border-radius: 4px;
     padding: 12px 20px;
     font-weight: bold;
@@ -23,7 +23,7 @@
 
 .bag-container footer button:hover {
     color: #FFF;
-    background: #33BFCB;
+    background: #040a42;
 }
 
 .book-table {

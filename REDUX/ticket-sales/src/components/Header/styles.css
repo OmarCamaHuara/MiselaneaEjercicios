@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #33BFCB;
+    background: #040a42;
     padding: 16px 128px;
 }
 
@@ -24,11 +24,11 @@
 .logo-text {
     margin-left: 8px;
     color: #FFF;
-    font-size: 20px;
+    font-size: 32px;
     font-weight: bold;
 }
 
-.header-card{
+.header-cart{
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -45,12 +45,17 @@
 }
 
 .header-cart div span {
-    font-size: 12px;
+    font-size: 32px;
+    color: #FFF;
+    font-weight: bold;
+}
+.header-cart div strong {
+    font-size: 30px;
     color: #FFF;
     font-weight: bold;
 }
 
-.header-cart div span strong {
-    font-size: 12px;
+.header-cart div span strong{
+    font-size: 50px;
     color: #FFF;
 }
