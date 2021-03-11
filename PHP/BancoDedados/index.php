@@ -23,6 +23,7 @@
     ));
 
     $router = new Aura\Router\RouterContainer();
+    
     $map = $router->getMap();
     $map->get('todo.list', '/', function ($request) use ($twig){
         $task = [

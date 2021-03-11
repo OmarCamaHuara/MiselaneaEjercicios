@@ -1,4 +1,5 @@
-[{
+[
+  {
   "_id": {
     "$oid": "6016cf66937399e892a815d0"
   },
@@ -46,4 +47,5 @@
   "complemento": "departamento",
   "ciudade": "Rio Janeiro",
   "estado": "RJ"
-}]
+}
+]

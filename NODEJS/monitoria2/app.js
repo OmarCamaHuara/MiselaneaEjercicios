@@ -20,7 +20,7 @@ app.post('/envia-cep',async (req, res) => {
 
     console.log(resultado)
 
-    res.render('resultado', {dado:resultado})
+    res.render('resultado', { dado : resultado })
 })
 
 app.listen(3333)
